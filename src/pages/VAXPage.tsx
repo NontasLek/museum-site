@@ -17,10 +17,10 @@ import Sidebar from '../components/Sidebar'
 
 // Static metadata — ids must match translation keys under vaxPage.systems.*
 const vaxBaseData = [
-  { id: "ariadne", name: "VAX 11/780", codename: "ARIADNE", year: "1983", image: "/images/VAX 11780.jpg" },
-  { id: "vax750",  name: "VAX 11/750", codename: "-",       year: "1980", image: "/images/VAX 11750.png" },
-  { id: "talos",   name: "VAX 8600",   codename: "TALOS",   year: "1984", image: "/images/VAX 8600.png"  },
-  { id: "minos",   name: "MicroVAX II",codename: "MINOS",   year: "1985", image: "/images/MicroVAX II.png" },
+  { id: "ariadne", name: "VAX 11/780", codename: "ARIADNE", year: "1983", image: import.meta.env.BASE_URL + 'images/VAX 11780.jpg' },
+  { id: "vax750",  name: "VAX 11/750", codename: "-",       year: "1980", image: import.meta.env.BASE_URL + 'images/VAX 11750.png' },
+  { id: "talos",   name: "VAX 8600",   codename: "TALOS",   year: "1984", image: import.meta.env.BASE_URL + 'images/VAX 8600.png'  },
+  { id: "minos",   name: "MicroVAX II",codename: "MINOS",   year: "1985", image: import.meta.env.BASE_URL + 'images/MicroVAX II.png' },
 ]
 
 function VAXPage() {

@@ -63,7 +63,7 @@ type TimelineImage = {
 // Empty-year entries ("") are visual spacers in the timeline layout.
 // Image IDs are referenced by CSS for per-image size overrides (#image-1989, #image-1991).
 const baseTimeline = [
-  { year: "1984",      images: [{ src: "/images/internet/1984_email.png", id: "image-1984" }] },
+  { year: "1984",      images: [] },
   { year: "1985",      images: [] },
   { year: "1989",      images: [] },
   { year: "",      images: [{ src: "/images/internet/1989.png",        id: "image-1989" }] },

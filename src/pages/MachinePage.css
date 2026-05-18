@@ -1,0 +1,272 @@
+/* MachinePage.css — styles for the individual machine/cpu/os detail page.
+   Layout: a fixed back button, then a two-column layout —
+     left column: machine image + history text + optional fun fact
+     right column: sticky specs panel (only for machines that have specs) */
+
+.machine-page {
+  min-height: 100vh;
+  background-color: #0a1628;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+/* Fixed back button — same visual style as the hamburger button in the sidebar */
+.machine-back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.machine-back-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: white;
+}
+
+/* Header area: image on the left, name + year on the right */
+.machine-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Machine photo */
+.machine-image {
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+   background-color: rgba(0,0,0,0.3);
+}
+
+/* Placeholder used when a machine has no photo */
+.machine-image-placeholder {
+  width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+.machine-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Machine name in retro monospace font */
+.machine-name {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  font-family: 'VT323', monospace;
+  letter-spacing: 3px;
+}
+
+.machine-year {
+  font-size: 20px;
+  color: #00ff00;
+  font-weight: bold;
+
+}
+
+/* Thin horizontal rule separating the header from the history text */
+.machine-divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.1);
+  margin-bottom: 32px;
+}
+
+/* Long-form history paragraph — pre-wrap preserves any line breaks in the translation text */
+.machine-history {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  max-width: 900px;
+  white-space: pre-wrap;
+  margin-bottom: 32px;
+}
+
+/* Fun fact box with a green left accent border */
+.machine-funfact {
+  font-style: italic;
+  background-color: rgba(0, 255, 136, 0.08);
+  border-left: 4px solid #00ff88;
+  border-radius: 8px;
+  padding: 20px 24px;
+  max-width: 900px;
+}
+
+.machine-funfact-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #00ff88;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.machine-funfact-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Two-column outer layout — main content flex-grows, specs panel is fixed width */
+.machine-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.machine-main {
+  flex: 1;
+}
+
+/* Specs panel sticks to the top of the viewport while the user scrolls history text */
+.machine-specs-panel {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  position: sticky;
+  top: 40px;
+}
+
+.machine-specs-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ff88;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.machine-specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.machine-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.machine-spec-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.machine-spec-value {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .machine-page {
+    padding: 24px;
+  }
+
+  .machine-image,
+  .machine-image-placeholder {
+    width: 300px;
+    height: 220px;
+  }
+
+  .machine-header {
+    gap: 24px;
+  }
+
+  .machine-specs-panel {
+    width: 200px;
+  }
+
+  .machine-name {
+    font-size: 28px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .machine-page {
+    padding: 16px;
+  }
+
+  .machine-back-btn {
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Stack image above text on mobile */
+  .machine-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .machine-image,
+  .machine-image-placeholder {
+    width: 100%;
+    height: 220px;
+  }
+
+  .machine-name {
+    font-size: 26px;
+  }
+
+  .machine-year {
+    font-size: 16px;
+  }
+
+  /* Stack specs panel below content on mobile */
+  .machine-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Specs panel loses sticky positioning when stacked vertically */
+  .machine-specs-panel {
+    width: 100%;
+    position: static;
+  }
+
+  .machine-history {
+    font-size: 14px;
+  }
+
+  .machine-funfact {
+    padding: 14px 16px;
+  }
+}

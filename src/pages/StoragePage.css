@@ -1,0 +1,203 @@
+/* StoragePage.css — styles for the individual storage device detail page.
+   There are two layouts depending on which storage entry is displayed:
+     s1 (IBM): single hero image + one history paragraph
+     s2 (DEC): multiple sub-sections, each with image + history + code block */
+
+.storage-page {
+  min-height: 100vh;
+  background-color: #0a1628;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+/* Fixed back button */
+.storage-back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.storage-back-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: white;
+}
+
+/* Header used for both the top-level entry and each DEC sub-device */
+.storage-header , .storage-DEC-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Storage device photo */
+.storage-image {
+  width: 400px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.storage-image-placeholder {
+  width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+  font-size: 14px;
+}
+
+.storage-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Device name in retro monospace font */
+.storage-name {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  font-family: 'VT323', monospace;
+  letter-spacing: 3px;
+}
+
+.storage-year {
+  font-size: 20px;
+  color: #00ff00;
+  font-weight: bold;
+
+}
+
+/* Thin divider after the header */
+.storage-divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255,255,255,0.1);
+  margin-bottom: 32px;
+}
+
+/* History paragraph for the s1 (IBM) entry */
+.storage-history {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  max-width: 900px;
+  white-space: pre-wrap;
+  margin-bottom: 32px;
+}
+
+/* History paragraph for each DEC sub-device — slightly smaller, wider max-width */
+.DEC-history{
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  max-width: 1900px;
+  white-space: pre-wrap;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+/* BSD disk label code block — monospace, horizontally scrollable for long lines */
+.code-block {
+  background-color: #1e1e1e;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #d4d4d4;
+  white-space: pre; /* preserve the exact whitespace of the disk label format */
+  overflow-x: auto;
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (max-width: 1024px) {
+  .storage-page {
+    padding: 24px;
+  }
+
+  .storage-image,
+  .storage-image-placeholder {
+    width: 300px;
+    height: 220px;
+  }
+
+  .storage-header,
+  .storage-DEC-header {
+    gap: 24px;
+  }
+
+  .storage-name {
+    font-size: 28px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .storage-page {
+    padding: 16px;
+  }
+
+  .storage-back-btn {
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+  }
+
+  /* Stack image above title on mobile */
+  .storage-header,
+  .storage-DEC-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+
+  .storage-image,
+  .storage-image-placeholder {
+    width: 100%;
+    height: 220px;
+  }
+
+  .storage-name {
+    font-size: 26px;
+  }
+
+  .storage-year {
+    font-size: 16px;
+  }
+
+
+  .storage-history {
+    font-size: 14px;
+  }
+
+  .DEC-history {
+    font-size: 13px;
+  }
+
+  .code-block {
+    padding: 14px 16px;
+    font-size: 12px;
+  }
+}

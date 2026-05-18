@@ -1,0 +1,141 @@
+/* Sidebar.css — styles for the slide-out navigation panel and its hamburger trigger.
+   Z-index stack:
+     1001 — LanguageToggle (always on top)
+     1000 — hamburger button
+      999 — sidebar panel
+      998 — overlay (darkens page behind the open sidebar) */
+
+/* Hamburger button — fixed in the top-left corner */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Individual bars of the hamburger icon */
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Semi-transparent overlay that covers the page while the sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+}
+
+/* Sidebar panel — hidden off-screen to the left by default */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* hidden off-screen */
+  width: 280px;
+  height: 100vh;
+  background-color: #0d1f3c;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  z-index: 999;
+  transition: left 0.3s ease; /* slides in when .sidebar-open is applied */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Applied by React when isOpen === true */
+.sidebar-open {
+  left: 0;
+}
+
+/* Top area of the sidebar — leaves space above the hamburger button */
+.sidebar-header {
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-top: 60px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+/* Navigation link — left border highlight indicates active/hover state */
+.sidebar-link {
+  padding: 16px 24px;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+/* Green left border and background on the currently active route */
+.sidebar-link.active {
+  background-color: rgba(0, 255, 136, 0.12);
+  color: white;
+  border-left: 3px solid #00ff88;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255,255,255,0.05);
+  color: white;
+  border-left: 3px solid #00ff88;
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Wider panel for larger screens */
+  .sidebar{
+    left:-420px;
+  width: 420px;
+  }
+
+  .sidebar.sidebar-open {
+    left: 0;
+  }
+
+  .sidebar-link {
+    font-size: 18px;
+    padding: 25px 25px;
+  }
+
+  .sidebar-header {
+    padding: 20px 20px;
+    margin-top: 50px;
+   }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .hamburger{
+    top:10px;
+    left: 10px;
+  }
+  .sidebar-link {
+    font-size: 13px;
+    padding: 20px 28px;
+  }
+
+  .sidebar-header {
+    padding: 20px 28px;
+    margin-top: 70px;
+  }
+}

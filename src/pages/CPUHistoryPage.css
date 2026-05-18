@@ -1,0 +1,410 @@
+/* CPUHistoryPage.css — styles for the CPU history overview page.
+   Layout: a vertical list of CPU sections, each with a year badge on the left
+   and text content (name, description, specs, achievements, highlight) on the right. */
+
+/* Page wrapper */
+.cpu-page {
+  min-height: 100vh;
+  background-color: #0a1628;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px 60px;
+}
+
+/* Centred intro block at the top of the page */
+.cpu-intro {
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+/* Page title — negative margin-top counteracts the sidebar header spacing */
+.cpu-title {
+  margin-top: -22px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+.cpu-intro-text {
+  margin-top: 80px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Vertical stack of CPU sections */
+.cpu-systems {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Each CPU section: year badge + text content side by side */
+.cpu-section {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  position: relative; /* needed for the absolute year badge and the ::after divider */
+}
+
+
+/* Year badge positioned to the left of the content column */
+.cpu-year-badge {
+  position: absolute;
+  top: 3px;
+  left: -20px;
+  background-color: #0d2b1a;
+  border: 2px solid rgba(0, 230, 118, 0.3);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff00;
+}
+
+/* Text content area */
+.cpu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* CPU name + machine badge on the same row */
+.cpu-name-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cpu-name {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+
+}
+
+/* Green pill showing which machine used this CPU */
+.cpu-machine-badge {
+  font-family: 'VT323', monospace;
+  background-color: rgba(0,255,136,0.1);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.cpu-intro-label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+.cpu-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Specs chips — displayed as a wrapping row of small cards */
+.cpu-specs {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cpu-spec-item {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cpu-spec-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cpu-spec-value {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Achievements list */
+.cpu-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cpu-achievements-title {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.cpu-achievement {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  padding-left: 8px;
+}
+
+/* Highlight box — green left border accent for a notable quote or fact */
+.cpu-highlight {
+  background-color: rgba(0, 204, 255, 0.06);
+  border-left: 3px solid #00ff88;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+}
+
+/* Thin divider line between sections, generated via ::after pseudo-element */
+.cpu-systems > div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Conclusion block at the bottom with a green top border */
+.cpu-conclusion {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  padding: 40px;
+  border-top: 2px solid #00ff00;
+}
+
+.cpu-conclusion-title {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cpu-conclusion-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+}
+
+/* Mini timeline in the conclusion */
+.cpu-timeline-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cpu-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.cpu-timeline-year {
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  font-size: 22px;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.cpu-timeline-event {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  padding-top: 2px;
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cpu-page {
+    padding: 32px 40px;
+  }
+
+  .cpu-title {
+    font-size: 48px;
+  }
+
+  .cpu-intro-text {
+    font-size: 19px;
+    margin-top: 90px;
+  }
+
+  .cpu-intro {
+    max-width: 700px;
+    margin-bottom: 90px;
+  }
+
+  /* On tablet the year badge sits above the content (no room for absolute left positioning) */
+  .cpu-year-badge {
+  top: -35px;
+  left: 47px;
+  }
+
+  .cpu-section {
+    gap: 48px;
+  }
+
+  .cpu-systems {
+    gap: 110px;
+    max-width: 100%;
+  }
+
+  .cpu-name {
+    font-size: 42px;
+  }
+
+  .cpu-machine-badge {
+    font-size: 24px;
+    padding: 6px 16px;
+  }
+
+  .cpu-intro-label {
+    font-size: 17px;
+  }
+
+  .cpu-description {
+    font-size: 17px;
+  }
+
+  .cpu-spec-label {
+    font-size: 13px;
+  }
+
+  .cpu-spec-value {
+    font-size: 15px;
+  }
+
+  .cpu-spec-item {
+    padding: 10px 18px;
+  }
+
+  .cpu-achievements-title {
+    font-size: 15px;
+  }
+
+  .cpu-achievement {
+    font-size: 16px;
+  }
+
+  .cpu-highlight {
+    font-size: 16px;
+    padding: 18px 22px;
+  }
+
+  .cpu-conclusion-title {
+    font-size: 42px;
+  }
+
+  .cpu-conclusion-text {
+    font-size: 17px;
+  }
+
+  .cpu-timeline-year {
+    font-size: 26px;
+  }
+
+  .cpu-timeline-event {
+    font-size: 16px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .cpu-page {
+    padding: 16px;
+  }
+
+  .cpu-title {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  .cpu-intro-text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .cpu-intro {
+    margin-bottom: 70px;
+  }
+
+  .cpu-systems {
+    gap: 56px;
+  }
+
+  /* Stack year badge above the content on narrow screens */
+  .cpu-section {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 40px;
+  }
+
+  .cpu-year-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .cpu-name {
+    font-size: 28px;
+  }
+
+  .cpu-description {
+    font-size: 14px;
+  }
+
+  /* Stack specs vertically on mobile */
+  .cpu-specs{
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+
+  .cpu-spec-item{
+    padding: 8px 4px;
+
+  }
+
+  .cpu-conclusion {
+    margin-top: 56px;
+    padding: 24px 16px;
+  }
+
+  .cpu-conclusion-title {
+    font-size: 28px;
+  }
+
+  .cpu-conclusion-text {
+    font-size: 14px;
+  }
+}

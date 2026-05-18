@@ -1,0 +1,511 @@
+/* InternetPage.css — styles for the internet history timeline and people section.
+   The page has two major parts:
+     1. A horizontally scrollable timeline (similar to the homepage)
+     2. A vertically scrolling people section below it
+
+   The timeline uses an overflow-x container that hides its scrollbar but remains scrollable.
+   The people section uses a CSS grid for the card layout. */
+
+/* Page wrapper — vertical scroll enabled for the people section */
+.internet-page {
+  min-height: 100vh;
+  background-color: #0a1628;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* Page title */
+.internet-title{
+  margin-top:-22px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+/* Scrollable container for the timeline — stretches beyond the page padding
+   using negative margin + wider width so it reaches the page edges */
+.internet-container {
+  width: calc(100% + 80px);
+  margin-top: 8%;
+  margin-left: -40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.internet-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each horizontal row of the timeline */
+.internet-scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+  width: max-content;
+  padding: 0 20px;
+
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.internet-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* One column per year — fixed width so all three rows stay aligned */
+.internet-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+/* Event text stacked vertically inside a column */
+.internet-events {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.year-1984-events{
+  position: relative;
+  background-color: #000;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 10px 24px;
+  margin: 24px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #00ff00;
+  white-space: pre; /* preserve the exact whitespace of the disk label format */
+  overflow: hidden;
+}
+
+.internet-event {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+
+.internet-wrapper {
+  width: max-content;
+}
+
+/* Purple horizontal bar separating events from year labels */
+.internet-line {
+  width: 100%;
+  height: 4px;
+  background-color: purple;
+  margin: 8px 0;
+}
+
+/* Green year labels below the timeline line */
+.internet-year-label {
+
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 8px;
+
+}
+
+/* Container for an image + caption pair inside a timeline column */
+.internet-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+/* Per-image size overrides — the 1989 and 1991 images are wider than the default */
+#image-1989{
+  height:271px;
+  width: 585px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  object-fit: fill;
+}
+
+#image-1991{
+  height: 230px;
+  width: 470px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  object-fit: fill;
+}
+
+/* Default image size for timeline photos */
+.internet-image {
+  width: 285px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  object-fit: contain;
+
+}
+
+
+.internet-image-caption {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ─────────────────────────── People section ─────────────────────────── */
+
+/* Wrapper for the entire people section — separated from the timeline by a purple top border */
+.people-wrapper {
+  padding-top: 120px;
+  padding-bottom: 40px;
+  border-top: 2px solid rgba(128, 0, 128, 0.4);
+  margin-top: 100px;
+}
+
+.people-intro {
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.people-title {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.people-intro-text {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+.people-section {
+  margin-bottom: 80px;
+}
+
+/* Section heading with decorative lines on both sides */
+.people-section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #00ff00;
+  margin-bottom: 40px;
+}
+
+/* The decorative lines that flank the section heading */
+.people-section-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0,255,136,0.3);
+}
+
+/* Responsive grid for person cards — minimum column width 380px */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+/* Individual person card */
+.people-card {
+  background-color: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+
+/* Green border highlight on hover */
+.people-card:hover {
+  border-color: rgba(0,255,136,0.3);
+}
+
+.people-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.people-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 4px;
+}
+
+/* Role shown in green under the name */
+.people-role {
+  font-size: 13px;
+  color: #00ff00;
+  letter-spacing: 0.5px;
+}
+
+.people-contributions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.people-contribution {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  padding-left: 4px;
+}
+
+/* Highlight quote at the bottom of each card — pushed to the bottom via margin-top: auto */
+.people-highlight {
+  background-color: rgba(0,255,136,0.06);
+  border-left: 3px solid #00ff88;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+  margin-top: auto;
+}
+
+.people-students-intro {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+  max-width: 700px;
+}
+
+/* Wrapping flex layout for student name chips */
+.people-students-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Individual student name pill */
+.people-student {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  transition: all 0.2s;
+}
+
+.people-student:hover {
+  background-color: rgba(0,255,136,0.08);
+  border-color: rgba(0,255,136,0.3);
+  color: white;
+}
+
+.people-students-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+}
+
+/* Centred conclusion paragraph at the very bottom */
+.people-conclusion {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  font-size: 18px;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .internet-page {
+    padding: 32px 40px;
+  }
+
+  .internet-title {
+    font-size: 45px;
+  }
+
+  .internet-column {
+    min-width: 520px;
+    max-width: 520px;
+  }
+
+  .internet-event {
+    font-size: 14px;
+  }
+
+  .internet-year-label {
+    font-size: 38px;
+  }
+
+  .internet-image-caption {
+    font-size: 13px;
+  }
+
+  .people-title {
+    font-size: 48px;
+  }
+
+  .people-intro-text {
+    font-size: 19px;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+
+  .people-section-title {
+    font-size: 26px;
+  }
+
+  .people-name {
+    font-size: 24px;
+  }
+
+  .people-role {
+    font-size: 15px;
+  }
+
+  .people-contribution {
+    font-size: 15px;
+  }
+
+  .people-highlight {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .people-students-intro {
+    font-size: 17px;
+  }
+
+  .people-student {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+
+  .people-students-note {
+    font-size: 15px;
+  }
+
+  .people-conclusion {
+    font-size: 21px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .internet-page {
+    padding: 16px;
+  }
+
+  .internet-title {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  /* Narrower columns so more of the timeline fits on a small screen */
+  .internet-column {
+    min-width: 370px;
+    max-width: 370px;
+
+  }
+
+  .internet-scroll {
+    gap: 120px;
+  }
+  .internet-line {
+    margin-top: -60px;
+    margin-bottom: 2px;
+  }
+  .internet-event {
+    font-size: 10px;
+  }
+  .internet-events{
+    gap:5px;
+  }
+
+  .year-1984-events {
+    font-size: 6px;
+    margin: 16px 0;
+    padding: 8px 12px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Scale down the wide 1989/1991 images on mobile */
+  #image-1989,
+  #image-1991 {
+    width: 100%;
+    max-width: 360px;
+    height: 70%;
+  }
+
+  /* Single column for people cards on mobile */
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-title {
+    font-size: 28px;
+  }
+
+  .people-intro-text {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+
+  .people-wrapper {
+    padding-top: 40px;
+    margin-top: 80px;
+  }
+
+  .people-intro {
+    margin-bottom: 40px;
+  }
+
+
+  /* Stack the decorative lines above/below the heading text on mobile */
+  .people-section-title {
+    font-size: 18px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .people-section-title .people-section-line {
+    width: 100%;
+    flex: none;
+  }
+
+
+  .people-students-grid {
+    flex-direction: column;
+  }
+  .people-student{
+    width: fit-content;
+  }
+
+
+  .people-conclusion {
+    padding: 24px 16px;
+    font-size: 15px;
+  }
+}

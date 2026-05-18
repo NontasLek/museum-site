@@ -1,0 +1,471 @@
+/* StorageHistoryPage.css — styles for the storage devices overview page.
+   Layout: alternating sections (image left/right) with image and text side by side.
+   Even sections: image on the left.  Odd sections: image on the right (reversed).
+   On mobile, the reverse layout is cancelled and everything stacks vertically. */
+
+.storage-history-page {
+  min-height: 100vh;
+  background-color: #0a1628;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px 60px;
+}
+
+
+/* Centred intro block */
+.storage-history-intro {
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+/* Page title */
+.storage-history-title {
+  margin-top:-22px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+
+}
+
+.storage-history-intro-text {
+  margin-top:80px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Vertical stack of storage sections */
+.storage-history-systems {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Default section: image left, content right */
+.storage-history-section {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Odd sections: flip to image right, content left */
+.storage-history-section-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image container — position:relative so badges can be overlaid */
+.storage-history-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Storage device photo */
+.storage-history-image {
+  width: 320px;
+  height: 260px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.15);
+  background-color: rgba(0,0,0,0.3);
+}
+
+.storage-history-image-placeholder {
+  width: 320px;
+  height: 260px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,255,255,0.15);
+  background-color: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+/* Year badge overlaid on the top-left corner of the image */
+.storage-history-year-badge {
+  font-family: 'VT323', monospace;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff00;
+}
+
+/* Category badge (disk/tape) overlaid on the bottom-left corner of the image */
+.storage-history-category-badge {
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* Text content area */
+.storage-history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+/* Device name + capacity badge on the same row */
+.storage-history-name-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.storage-history-name {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Green pill showing storage capacity */
+.storage-history-capacity {
+  font-family: 'VT323', monospace;
+  background-color: rgba(0,255,136,0.1);
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.storage-history-intro-label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+.storage-history-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Specs chips */
+.storage-history-specs {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.storage-history-spec-item {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.storage-history-spec-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.storage-history-spec-value {
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Achievements list */
+.storage-history-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.storage-history-achievements-title {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.storage-history-achievement {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  padding-left: 8px;
+}
+
+/* Highlight box — green left accent border */
+.storage-history-highlight {
+  background-color: rgba(0,255,136,0.06);
+  border-left: 3px solid #00ff88;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+}
+
+/* Conclusion block with purple top border */
+.storage-history-conclusion {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  padding: 40px;
+  border-top: 2px solid purple;
+}
+
+.storage-history-conclusion-title {
+  font-family: 'VT323', monospace;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.storage-history-conclusion-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+}
+
+/* Mini timeline in the conclusion */
+.storage-history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.storage-history-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.storage-history-timeline-year {
+  font-family: 'VT323', monospace;
+  color: #00ff00;
+  font-size: 22px;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.storage-history-timeline-event {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  padding-top: 2px;
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .storage-history-page {
+    padding: 32px 40px;
+  }
+
+  .storage-history-title {
+    font-size: 48px;
+  }
+
+  .storage-history-intro-text {
+    font-size: 19px;
+    margin-top: 90px;
+  }
+
+  .storage-history-intro {
+    max-width: 700px;
+    margin-bottom: 90px;
+  }
+
+  .storage-history-image,
+  .storage-history-image-placeholder {
+    width: 370px;
+    height: 300px;
+  }
+
+  .storage-history-year-badge {
+    font-size: 24px;
+    padding: 6px 14px;
+  }
+
+  .storage-history-category-badge {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  .storage-history-section {
+    gap: 48px;
+  }
+
+  .storage-history-systems {
+    gap: 110px;
+    max-width: 100%;
+  }
+
+  .storage-history-name {
+    font-size: 42px;
+  }
+
+  .storage-history-capacity {
+    font-size: 24px;
+    padding: 6px 16px;
+  }
+
+  .storage-history-intro-label {
+    font-size: 17px;
+  }
+
+  .storage-history-description {
+    font-size: 17px;
+  }
+
+  .storage-history-spec-label {
+    font-size: 13px;
+  }
+
+  .storage-history-spec-value {
+    font-size: 15px;
+  }
+
+  .storage-history-spec-item {
+    padding: 10px 18px;
+  }
+
+  .storage-history-achievements-title {
+    font-size: 15px;
+  }
+
+  .storage-history-achievement {
+    font-size: 16px;
+  }
+
+  .storage-history-highlight {
+    font-size: 16px;
+    padding: 18px 22px;
+  }
+
+  .storage-history-conclusion-title {
+    font-size: 42px;
+  }
+
+  .storage-history-conclusion-text {
+    font-size: 17px;
+  }
+
+  .storage-history-timeline-year {
+    font-size: 26px;
+  }
+
+  .storage-history-timeline-event {
+    font-size: 16px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .storage-history-page {
+    padding: 16px;
+  }
+
+  .storage-history-title {
+    font-size: 28px;
+    margin-top: 40px;
+  }
+
+  .storage-history-intro-text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  .storage-history-intro {
+    margin-bottom: 70px;
+  }
+
+  .storage-history-systems {
+    gap: 56px;
+  }
+
+  /* Stack image above text on mobile */
+  .storage-history-section {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 40px;
+  }
+
+  /* Cancel the alternating reverse layout on mobile — all sections stack identically */
+  .storage-history-section-reverse {
+    flex-direction: column;
+  }
+
+  .storage-history-image,
+  .storage-history-image-placeholder {
+    width: 100%;
+    height: 220px;
+  }
+
+  .storage-history-year-badge {
+    top: -8px;
+    left: -8px;
+    font-size: 16px;
+    padding: 2px 8px;
+  }
+
+  .storage-history-category-badge {
+    bottom: -8px;
+    left: -8px;
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .storage-history-name {
+    font-size: 28px;
+  }
+
+  .storage-history-description {
+    font-size: 14px;
+  }
+
+  /* Stack specs vertically on mobile */
+  .storage-history-specs{
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+
+  .storage-history-spec-item{
+    padding: 8px 4px;
+
+  }
+
+  .storage-history-conclusion {
+    margin-top: 56px;
+    padding: 24px 16px;
+  }
+
+  .storage-history-conclusion-title {
+    font-size: 28px;
+  }
+
+  .storage-history-conclusion-text {
+    font-size: 14px;
+  }
+}

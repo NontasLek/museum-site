@@ -1,0 +1,263 @@
+/* App.css — global base styles and homepage timeline layout.
+   This file is imported once in App.tsx and applies to the entire app.
+   Page-specific styles live in their own CSS files alongside each component. */
+
+/* Reset — removes browser default margins/padding and uses border-box sizing globally */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base theme: dark navy background, white text, retro VT323 monospace font */
+body {
+  background-color: #0a1628;
+  color: white;
+  font-family: 'VT323', monospace;
+  letter-spacing: 3px;
+}
+
+/* Site title displayed at the top of the homepage */
+.title {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+  text-shadow: 0 0 20px #00ff41;
+  letter-spacing: 8px;
+}
+
+/* Outer wrapper for the full-screen horizontal timeline */
+.timeline-container {
+  padding-top: 10%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each row of the timeline (machines, years, storage) scrolls horizontally together */
+.timeline-scroll {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 40px;
+  gap: 340px;
+  width: max-content;
+  padding-left: 160px;
+}
+
+
+/* One column per year — contains the stacked machine/cpu/os cards */
+.year-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  min-width: 220px;
+}
+
+/* Stack of three cards (computer, cpu, os) inside each year column */
+.machines {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* The horizontal purple bar separating machine cards from year labels */
+.timeline-line {
+  width: 100%;
+  height: 4px;
+  background-color: purple;
+}
+
+/* Clickable card for each machine, CPU, OS, or storage entry */
+.machine-card {
+
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:85px;
+  width: 150px;
+  transition: transform 0.2s;
+}
+
+.machine-card:hover {
+  transform: scale(1.05);
+}
+
+/* Green year labels below the timeline line */
+.year-label {
+  color: #00ff00;
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The 1981 year column needs a right shift because the Plexus P/40 has its own
+   separate spacer column — this keeps the label visually under the right machines */
+.year-column[data-year="1981"] {
+  position: relative;
+  left: 270px;
+}
+
+
+/* Positioned wrapper so the category labels can be placed absolutely on the left */
+.timeline-wrapper {
+  position: relative;
+  width: max-content;
+
+}
+
+/* Fixed "Computer / CPU / OS" labels on the left edge of the timeline */
+.category-labels {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+  background-color: #0a1628; /* matches body background to cover scrolled content */
+}
+
+.category-label {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  color: #00ff00;
+  letter-spacing: 2px;
+  width: 120px;
+  margin-left:20px;
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title {
+    font-size: 62px;
+    letter-spacing: 8px;
+  }
+
+  .timeline-container {
+    padding-top: 0%;
+  }
+
+  .timeline-scroll {
+    gap: 160px;
+    padding: 16px 150px;
+    padding-left: 170px;
+  }
+
+  .timeline-line {
+    height: 5px;
+  }
+  .year-column {
+    min-width: 220px;
+  }
+
+  .machine-card {
+    font-size: 32px;
+    width: 165px;
+    height: 95px;
+  }
+
+  .year-label {
+    font-size: 40px;
+  }
+
+  .category-label {
+    font-size: 18px;
+    width: 130px;
+    height: 113px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+  }
+  .category-labels{
+    gap:7px;
+  }
+  .year-column[data-year="1981"] {
+    left: 165px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+
+  .title {
+    font-size: 36px;
+    letter-spacing: 2px;
+    top: 10px;
+  }
+
+  .timeline-container {
+    padding-top:40%;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .timeline-scroll {
+    gap: 80px;
+    padding-left: 100px;
+  }
+  .timeline-line {
+    height: 3px;
+  }
+
+  .year-column {
+    min-width: 150px;
+    gap: 10px;
+  }
+
+  .machines {
+    gap: 24px;
+  }
+
+  .machine-card {
+    font-size: 20px;
+    width: 130px;
+    height: 75px;
+  }
+
+  .year-label {
+    font-size: 28px;
+    padding-top: 10px;
+  }
+
+  .category-label {
+    font-size: 12px;
+    width: 90px;
+    height: 97px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+  }
+  .category-labels{
+    gap:7px;
+  }
+
+  /* Reduce the 1981 column offset on smaller screens */
+  .year-column[data-year="1981"] {
+    left: 110px;
+  }
+}

@@ -1,0 +1,146 @@
+/* LoadingScreen.css — styles for the retro animated splash screen.
+   The screen sits above everything else (z-index: 9999) and fades out via
+   the .loading-fadeout class added by the component when phase >= 1. */
+
+/* Full-screen overlay covering the app during initialisation */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a1628;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1.2s ease;
+}
+
+/* Applied by React when phase >= 1 — triggers the opacity fade-out */
+.loading-fadeout {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+  position: relative;
+}
+
+/* CRT scanline overlay — repeating semi-transparent horizontal stripes for retro look */
+.loading-scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* "INITIALIZING SYSTEM..." label — blinks to simulate a terminal prompt */
+.loading-label {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #00ff00;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Large title text — typed one character at a time by the component */
+.loading-title {
+  font-family: 'VT323', monospace;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+/* Blinking cursor appended to the title text while typing is in progress */
+.loading-cursor {
+  color: #00ff00;
+  animation: cursor-blink 0.7s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Subtitle line below the title */
+.loading-subtitle {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* Progress bar — animates from 0% to 100% in 2s, independent of the typing animation */
+.loading-bar-container {
+  width: 300px;
+  height: 3px;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%;
+  background-color: #00ff00;
+  border-radius: 2px;
+  animation: progress 2s ease forwards;
+}
+
+@keyframes progress {
+  from { width: 0% }
+  to { width: 100% }
+}
+
+/* ── Tablet: 768px–1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .loading-title {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+}
+
+/* ── Mobile: < 768px ── */
+@media (max-width: 767px) {
+  .loading-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+
+  .loading-subtitle {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .loading-bar-container {
+    width: 200px;
+  }
+
+  .loading-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}

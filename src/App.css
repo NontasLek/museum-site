@@ -33,7 +33,7 @@ body {
 
 /* Outer wrapper for the full-screen horizontal timeline */
 .timeline-container {
-  padding-top: 10%;
+  padding-top: 5%;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -145,7 +145,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size: 18px;
+  font-size: 28px;
   color: #00ff00;
   letter-spacing: 2px;
   width: 120px;
@@ -211,7 +211,7 @@ body {
   }
 
   .timeline-container {
-    padding-top:40%;
+    padding-top:30%;
     width: 100%;
     height: 100%;
 
@@ -235,7 +235,7 @@ body {
   }
 
   .machine-card {
-    font-size: 20px;
+    font-size: 23px;
     width: 130px;
     height: 75px;
   }
@@ -246,7 +246,7 @@ body {
   }
 
   .category-label {
-    font-size: 12px;
+    font-size: 20px;
     width: 90px;
     height: 97px;
     margin-left: 8px;

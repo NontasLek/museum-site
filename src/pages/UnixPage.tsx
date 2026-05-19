@@ -19,7 +19,7 @@ const osBaseData = [
   { id: "bsd42",      name: "BSD 4.2",           machine: "VAX 11/780 «ARIADNE»",            year: "1983" },
   { id: "ultrix",     name: "Ultrix",            machine: "VAX 8600 «TALOS» & MicroVAX II",  year: "1984" },
   { id: "sunos",      name: "SunOS",             machine: "Sun 3/280",                       year: "1985" },
-  { id: "convexunix", name: "Convex UNIX 6.2",   machine: "Convex C-120",                    year: "~1990" },
+  { id: "convexunix", name: "Convex UNIX 6.2",   machine: "Convex C-120",                    year: "1990" },
 ]
 
 function UnixPage() {

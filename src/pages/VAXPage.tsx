@@ -29,11 +29,12 @@ function VAXPage() {
   // Merge static base data with translated text fields
   const vaxSystems = vaxBaseData.map((vax) => ({
     ...vax,
-    intro:        t(`vaxPage.systems.${vax.id}.intro`),
-    description:  t(`vaxPage.systems.${vax.id}.description`),
-    achievements: t(`vaxPage.systems.${vax.id}.achievements`, { returnObjects: true }) as string[],
-    specs:        t(`vaxPage.systems.${vax.id}.specs`,        { returnObjects: true }) as { label: string; value: string }[],
-    highlight:    t(`vaxPage.systems.${vax.id}.highlight`),
+    intro:             t(`vaxPage.systems.${vax.id}.intro`),
+    description:       t(`vaxPage.systems.${vax.id}.description`),
+    achievements:      t(`vaxPage.systems.${vax.id}.achievements`, { returnObjects: true }) as string[],
+    specs:             t(`vaxPage.systems.${vax.id}.specs`,        { returnObjects: true }) as { label: string; value: string }[],
+    highlight:         t(`vaxPage.systems.${vax.id}.highlight`),
+    achievementsTitle: t(`vaxPage.systems.${vax.id}.achievementsTitle`, t('vaxPage.achievementsTitle')),
   }))
 
   // Mini timeline items for the conclusion section
@@ -85,7 +86,7 @@ function VAXPage() {
 
               {/* Achievements */}
               <div className="vax-achievements">
-                <p className="vax-achievements-title">{t('vaxPage.achievementsTitle')}</p>
+                <p className="vax-achievements-title">{vax.achievementsTitle}</p>
                 {vax.achievements.map((a, i) => (
                   <p key={i} className="vax-achievement">- {a}</p>
                 ))}

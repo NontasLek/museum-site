@@ -68,10 +68,10 @@ function CPUHistoryPage() {
             <div className="cpu-content">
               <div className="cpu-name-row">
                 <h2 className="cpu-name">{cpu.name}</h2>
+                {cpu.id === 'm68000' && <span className="cpu-intro-label">{t('cpuHistoryPage.cpus.m68000.label')}</span>}
                 {/* Badge showing which machine this CPU belonged to */}
                 <span className="cpu-machine-badge">{cpu.machine}</span>
               </div>
-
               <p className="cpu-intro-label">{cpu.intro}</p>
               <p className="cpu-description">{cpu.description}</p>
 

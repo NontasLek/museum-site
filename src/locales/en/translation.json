@@ -22,7 +22,7 @@
         "fun_fact": "From Ariadne was sent the first email between Greece and the outside world on Thursday, March 29, 1984, arriving in America on Saturday, March 31 (source: Manolis Katevenis Archive)"
       },
       "2": {
-        "history": "The VAX KA780 was a 32-bit processor used in the VAX-11/780 computer, introduced by Digital Equipment Corporation in the late 1970s. It was part of the VAX architecture, designed for high performance in scientific and university computing. The processor was fully 32-bit and supported a large memory address space for its time. It typically ran the VMS operating system but could also run versions of BSD UNIX. The KA780 is considered one of the most significant processors of the minicomputer era."
+        "history": "The VAX KA780 was a 32-bit processor used in the VAX-11/780 computer, introduced by Digital Equipment Corporation in the late 1970s. It was part of the VAX architecture, designed for high-performance computing. The processor was fully 32-bit and supported a large memory address space for its time. It typically ran the VMS operating system but could also run versions of BSD UNIX. The KA780 is considered one of the most significant processors of the minicomputer era."
       },
       "3": {
         "history": "BSD 4.2 is a significant version of the Unix operating system, developed at the University of California, Berkeley and released in 1983. This version introduced significant improvements in memory management and the file system. One of its most important features was the integration of TCP/IP networking, enabling computers to connect to networks and the early Internet."
@@ -45,7 +45,7 @@
       },
       "10": {
         "history": "The Plexus P/40 was introduced in the early 1980s as a computer offering the UNIX operating system. It was based on the Zilog Z8000 16-bit processor with 512KB memory with automatic error correction, expandable to 4MB. A typical P/40 configuration included a work processor and 2 input/output processors (I/O). During operation, the work processor performed computations and operating system operations while the I/O processors managed the disk, tape, and serial input/output. The P/40 ran AT&T UNIX III, written in C, and supported BASIC, COBOL, FORTRAN, and Pascal. The P/40 included a 16-bit intelligent mass storage processor (IMSP) with 128KB local memory. The IMSP could control up to 4 Winchester disks of 14 inches 72MB or 145MB and a 1/2-inch, 9-track, 1,600-bpi tape. The P/40 computers could be interconnected in a Xerox Ethernet local network.",
-        "fun_fact": "It could support up to 40 simultaneous interactive users, which was very impressive for the time."
+        "fun_fact": "It could support up to 40 simultaneous interactive users, which was remarkable for the time."
       },
       "11": {
         "history": "The Zilog Z8000 was a 16-bit microprocessor developed by Zilog in the late 1970s and used in professional computing systems of the era. One of the systems based on it was the Plexus P/40, introduced in the early 1980s as a computer offering UNIX System III. The system used the Zilog Z8000 with 512KB memory with automatic error correction, expandable to 4MB, and could support up to 40 simultaneous interactive users. A typical P/40 configuration included a work processor for computations and OS operations, as well as two I/O processors for disk, tape, and serial communication management. Additionally, the system included a 16-bit intelligent mass storage processor (IMSP) and could be connected to an Ethernet local network, enabling communication between multiple computers."
@@ -65,7 +65,7 @@
       },
       "16": {
         "history": "The MicroVAX II was introduced in May 1985 as an intermediate member of the Digital Equipment Corporation (DEC) MicroVAX family. It supported the VAX/VMS and ULTRIX operating systems. ULTRIX was a Unix version developed and offered by DEC itself. The MicroVAX II also offered at least one additional operating system beyond those provided by DEC, such as BSD Unix from mt Xinu. It used the CPU KA630-AA unit, a quad-height unit for the Q22-Bus, and contained the MicroVAX 78032 microprocessor and a MicroVAX 78132 floating-point coprocessor at 5 MHz (200ns machine cycle). The specific unit in our collection uses the rack-mount enclosure H9642, which supported integration of RA60 and RA81 disks as well as a TS05 tape drive as in our collection system.",
-        "fun_fact": "The MicroVAX II started with 1 MB RAM and could be expanded up to 16 MB, which at that time meant enormous flexibility and upgrade potential."
+        "fun_fact": "The MicroVAX II started with 1 MB RAM and could be expanded up to 16 MB, which at that time meant great flexibility and upgrade potential."
       },
       "17": {
         "history": "The VAX KA630 was a 32-bit central processing unit used in the MicroVAX II computer by Digital Equipment Corporation. The KA630-AA unit was the system's CPU and included the MicroVAX 78032 microprocessor along with the MicroVAX 78132 floating-point coprocessor, operating at 5 MHz. The MicroVAX II was introduced in May 1985 as an intermediate system in the MicroVAX family and supported the VAX/VMS and Ultrix operating systems, while also able to run BSD Unix versions. The CPU was designed for the Q22-Bus and the base configuration included 1MB memory expandable to 16MB. In the laboratory collection, the MicroVAX II is installed in rack-mount enclosure H9642, which supports RA60 and RA81 disks as well as a TS05 magnetic tape unit."
@@ -85,7 +85,7 @@
       },
       "22": {
         "history": "The Convex C series consists of parallel systems with vector registers and bus communication architecture. The series consists of the C-120/130 and C-210/220/230/240 models. The central processing unit (CPU) of the C-120 consists of a scalar processor, address management unit, and a vector processor using CMOS VLSI 20K gates/chip technology. The vector architecture is register-to-register with three asynchronous pipeline operations: load, store, and edit; add, subtract; multiply, add, divide, and square root. Each CPU has 8 vector registers, each with 128 elements of 64-bit. The scalar unit performs integer arithmetic and multiplication, addition, division, and square root of floating-point in hardware with a 64Kbyte cache. The scalar and vector units can operate simultaneously. Beyond the main CPU, the C-120 has channel control units (CCUs) for Multibus and VMEbus, and a CCU for other high-performance devices. Each CCU has a 68020 processor. An independent service processing unit (SPU) with a 68020 runs a simplified UNIX for system management services. The maximum performance of the C-120 in scientific computing is 20 Mflops in double precision (64-bit arithmetic) and 40 Mflops in single precision (32-bit arithmetic).",
-        "fun_fact": "Did you know that the C-120 consisted of two cabinets approximately 1.60m tall? Today, a smartphone has many times the power at a millionth of the size!"
+        "fun_fact": "Did you know that vector architectures were the dominant model for high-performance supercomputers in the 1970s-1990s, with another example of such a machine from that era being the Cray-1? This computing model, also known as single-instruction multiple-data (SIMD), is currently implemented in GPUs and as a subset of instructions in modern CPUs."
       },
       "23": {
         "history": "While the Convex C-120 was a powerful supercomputer for scientific computing, the everyday management of the system relied on the reliability of the Motorola 68000 series. Specifically, the Motorola 68020 processor (the 32-bit evolution of the 68000) did not perform the heavy mathematical calculations, but functioned as the brain of the supporting units. It was used in the Service Processing Unit (SPU), running a simplified UNIX for system management, as well as in the Channel Control Units (CCUs) for controlling the Multibus and VMEbus. This choice allowed the main Convex processor to remain undistracted for complex vector operations, while the 68020s handled the administrative work and communication with peripheral devices."
@@ -214,20 +214,20 @@
   },
   "vaxPage": {
     "title": "The History of VAX at CSD",
-    "introText": "From 1983 to the late 1990s, the VAX systems of Digital Equipment Corporation (DEC) formed the backbone of the department's computing infrastructure. They were not merely machines - they were the tools that allowed CSD to become a pioneer in Greece in networking, research, and education.",
+    "introText": "From 1983 until the late 1990s, the internationally successful Digital Equipment Corporation (DEC) VAX systems formed the backbone of the department's computing infrastructure. Following the international practice of many academic departments that used VAX systems to train scientists in computer science, they were the tools that allowed CSD to become a pioneer in Greece in networking, research and education.",
     "achievementsTitle": "What the department gained:",
     "conclusionTitle": "The Legacy of VAX",
-    "conclusionText": "From the VAX 11/780 of 1983 to the MicroVAX II of 1985, CSD moved from a single central system to a distributed infrastructure of multiple machines.",
+    "conclusionText": "From the VAX 11/780 of 1983 to the MicroVAX II in the late 1980s and early 1990s, CSD combined rich centralized and distributed infrastructure on large and medium-sized machines respectively.",
     "timeline": [
-      { "year": "1983", "event": "1 VAX - connection to the world via UUCP" },
-      { "year": "1984", "event": "First email from Greece - CSD on the world map" },
-      { "year": "1985", "event": "Multiple VAX - each laboratory with its own infrastructure" },
-      { "year": "1990+", "event": "Transition to the Internet - VAX systems remain as servers" }
+      { "year": "1983", "event": "VAX machine offers connection to the outside world via UUCP" },
+      { "year": "1984", "event": "First email from Greece - CSD on the global Internet map" },
+      { "year": "1985-90", "event": "Using multiple VAXs in CSD with VMS and UNIX operating systems" },
+      { "year": "1990+", "event": "Full Internet support and education of large numbers of students on VAX systems and the UNIX operating system" }
     ],
     "systems": {
       "ariadne": {
         "intro": "The Starting Point",
-        "description": "The first VAX the department acquired was the VAX 11/780, known as \"Ariadne\". It was installed in 1983 at the Institute of Computer Science of what was then the Research Center of Crete (FORTH-ICS). It ran UNIX BSD 4.2 and operated with a KA780 32-bit CPU.",
+        "description": "One of the first VAX systems the CSD acquired was the VAX 11/780, also known as \"Ariadne\". It was installed in 1983 at the Institute of Computer Science of what was then the Research Center of Crete (FORTH-ICS). It ran UNIX BSD 4.2 and operated with a KA780 32-bit CPU.",
         "achievements": [
           "Access to a real UNIX environment for research and education",
           "Ability to connect with the outside world via X.25 and UUCP",
@@ -238,14 +238,14 @@
           { "label": "OS", "value": "UNIX BSD 4.2" },
           { "label": "Connection", "value": "X.25 / UUCP" }
         ],
-        "highlight": "Ariadne was not just a computer. It was the gateway that connected Crete and Greece to the global internet."
+        "highlight": "Ariadne was the first gateway connecting Crete and Greece to the global Internet."
       },
       "vax750": {
         "intro": "The Expansion - More Users, Lower Cost",
+        "achievementsTitle": "What the department and the University of Crete gained:",
         "description": "The VAX 11/750 was introduced in 1980 as a more compact and economical version of the 11/780. It used the KA750 CPU and supported the same I/O buses (UNIBUS, MASSBUS) as its predecessor.",
         "achievements": [
           "Ability to serve more students simultaneously",
-          "Backup system that enhanced infrastructure reliability",
           "Experience in managing multiple VAX systems"
         ],
         "specs": [
@@ -256,22 +256,22 @@
         "highlight": "Lower cost, more compact design - the department's infrastructure began to expand."
       },
       "talos": {
-        "intro": "The Performance Leap - 4x Faster",
-        "description": "In 1984, the department acquired the VAX 8600, known as \"Talos\". With an 80ns machine cycle (12.5 MHz) and ECL macrocell array implementation, the 8600 was approximately 4 times faster than the 11/780.",
+        "intro": "Higher performance - 4x Faster than VAX-11/780",
+        "description": "In the late 80s the department acquired the VAX 8600, known as \"Talos\". With an 80ns machine cycle (12.5 MHz) and ECL macrocell array implementation, the 8600 was approximately 4 times faster than the 11/780.",
         "achievements": [
           "Ability to run computationally demanding research tasks",
           "Capacity to host more concurrent users",
-          "Foundation for complex research programs in networking and AI"
+          "Better student education, networking and computerization"
         ],
         "specs": [
           { "label": "CPU", "value": "12.5 MHz / 80ns cycle" },
           { "label": "Cache", "value": "16KB" },
           { "label": "Technology", "value": "ECL Macrocell Arrays" }
         ],
-        "highlight": "4x faster than the 11/780 - CSD could now run serious research programs."
+        "highlight": "4x faster than the 11/780 - CSD enriches its central computing infrastructure"
       },
       "minos": {
-        "intro": "The Maturity - VAX for Everyone",
+        "intro": "Highest level of integration - one VAX for every group",
         "description": "The MicroVAX II, known as \"Minos\", marked a new era. Introduced in May 1985 as the most accessible member of the VAX family, with KA630-AA CPU at 5 MHz and initial 1MB memory expandable to 16MB.",
         "achievements": [
           "Ability to acquire VAX systems for laboratory needs without high cost",
@@ -283,7 +283,7 @@
           { "label": "Memory", "value": "1MB - 16MB" },  
           { "label": "OS", "value": "VAX/VMS, ULTRIX, BSD Unix" }
         ],
-        "highlight": "With Minos, every department laboratory could have its own VAX infrastructure."
+        "highlight": "With machines like Minos, each lab or group in the department could have its own VAX server."
       }
     }
   },
@@ -303,7 +303,7 @@
     ],
     "systems": {
       "rl02": {
-        "intro": "The Origins - Removable Disk Pack",
+        "intro": "Removable Disk Pack",
         "description": "The RL02 was a removable pack disk drive introduced in 1978 by DEC. It used IBM 5440 type packs and had a capacity of 10MB - double its predecessor the RL01. Up to 4 disks could be connected to one controller.",
         "achievements": [
           "First ability to store and transfer data",
@@ -315,7 +315,7 @@
           { "label": "Type", "value": "Removable Pack" },
           { "label": "Max Connection", "value": "4 disks / controller" }
         ],
-        "highlight": "By today's standards it seems insignificant, but at the time it represented significant computing power."
+        "highlight": "By today's standards its capacity seems small, but in the early 1980s it was an enterprise-scale device."
       },
       "ibm3370": {
         "intro": "Technological Innovation - Thin-Film Technology",
@@ -348,7 +348,7 @@
         "highlight": "The only removable disk in the family - ideal for transferring data between systems."
       },
       "ra80": {
-        "intro": "DEC Digital Storage Architecture - Winchester",
+        "intro": "DEC Digital Storage Architecture (DSA) - Winchester",
         "description": "The RA80 was a non-removable media disk drive with 121MB capacity. Introduced in 1982 by DEC as part of the DSA. Internally controlled by a microprocessor and used 32-bit burst error correction code (burst ECC).",
         "achievements": [
           "Reliable storage with burst ECC 32-bit",
@@ -405,7 +405,7 @@
           { "label": "CPU", "value": "Motorola 6802" },
           { "label": "Firmware", "value": "ROM 8KB" }
         ],
-        "highlight": "The TU80 was the data protection shield of CSD for years."
+        "highlight": "The TU80 was critical for protecting CSD user data for years."
       },
       "tu81plus": {
         "intro": "The Evolution - High Density Backup",
@@ -564,53 +564,55 @@
   },
   "cpuHistoryPage": {
     "title": "The Evolution of CPUs at CSD",
-    "introText": "Every machine the department acquired brought with it a new processor. From the 32-bit VAX CPUs of DEC in the early 1980s to the vector CMOS VLSI of the Convex C-120 in 1990, the history of CSD's CPUs reflects the rapid evolution of computational power.",
+    "introText": "With the various computer systems that the department acquired in its history, it also followed the history of processors. From the 32-bit VAX CPUs of DEC in the early 1980s to the vector CMOS VLSI of the Convex C-120 in 1990, the history of CSD's CPUs reflects the rapid evolution of computational power.",
     "achievementsTitle": "What it brought to the department:",
     "conclusionTitle": "A Decade of Processing Evolution",
     "conclusionText": "From the KA780 of 1978 at 1 MIPS to the Convex CMOS VLSI of 1990 at 40 Mflops, CSD's computational power multiplied dozens of times within a single decade.",
     "timeline": [
       { "year": "1978", "event": "KA780 - 1 MIPS, the department's first 32-bit processor" },
-      { "year": "1981", "event": "Motorola 68000 & Zilog Z8000 - specialized architectures" },
+      { "year": "1981", "event": "Motorola 68000 - 16/32-bit processor for a variety of applications, and as an I/O controller" },
+      { "year": "1981", "event": "Zilog Z8000 - 16-bit processor with UNIX support" },
       { "year": "1984", "event": "KA86 - 4 MIPS, 4x faster than the KA780" },
-      { "year": "1987", "event": "Motorola 68020 - 32-bit architecture for workstations" },
-      { "year": "1990", "event": "Convex CMOS VLSI - 40 Mflops, the first vector processor" }
+      { "year": "1987", "event": "Motorola 68020 - 32-bit architecture for UNIX workstations" },
+      { "year": "1990", "event": "Convex CMOS VLSI - 40 Mflops, one of the first vector processors" }
     ],
     "cpus": {
       "ka780": {
         "intro": "The Department's First 32-bit Processor",
-        "description": "The VAX KA780 was the CPU of the legendary VAX-11/780 'Ariadne', the first computer the department acquired. It implemented DEC's VAX architecture with full 32-bit processing, virtual memory management, and a rich instruction set (CISC). With approximately 1 MIPS performance, it was a milestone for its era.",
+        "description": "The VAX KA780 was the CPU of the legendary VAX-11/780, one of the first computers acquired by the department, also known as «Ariadne». It implemented DEC's VAX architecture with full 32-bit processing, virtual memory management, and a rich instruction set (CISC). With approximately 1 MIPS performance, it was a milestone for its era.",
         "achievements": [
-          "First access to full 32-bit computing in the department",
+          "One of the world's first CPUs with 32-bit architecture",
           "Multi-user support and virtual memory",
-          "Foundation for the first email from Greece in 1984"
+          "Through I/O channels, it supported networking and the sending of the first email from Greece in 1984."
         ],
         "specs": [
           { "label": "Architecture", "value": "VAX 32-bit CISC" },
           { "label": "Performance", "value": "1 MIPS" },
           { "label": "Machine", "value": "VAX 11/780" }
         ],
-        "highlight": "The KA780 was the heart of Ariadne - the computer that connected Greece to the world."
+        "highlight": "The KA780 was the heart of Ariadne - the first computer that connected Greece to the world."
       },
       "ka750": {
-        "intro": "The Affordable Option - Power for Everyone",
-        "description": "The VAX KA750 was used in the VAX-11/750, a more compact and affordable version of the 11/780. With approximately 0.5 MIPS performance, it was less powerful than the KA780 but much more accessible, allowing the department to expand its infrastructure. It supported the same I/O buses (UNIBUS, MASSBUS) as its predecessor.",
+        "intro": "More compact design compared to the KA780",
+        "description": "The VAX KA750 was used in the VAX-11/750, a more compact and economical version of the 11/780. With a performance of about 0.5 MIPS, it was less powerful than the KA780 but much more compact and economical. It supported the same I/O buses (UNIBUS, MASSBUS) as its predecessor.",
         "achievements": [
-          "Ability to acquire a second VAX system at lower cost",
-          "Backup system that increased infrastructure reliability",
-          "Common architecture with the KA780 - same software stack"
+          "Shared architecture with KA780 - same software stack",
+          "Ease of management by the same staff, without retraining",
+          "Support for more applications for the VMS operating system"
         ],
         "specs": [
           { "label": "Architecture", "value": "VAX 32-bit CISC" },
           { "label": "Performance", "value": "0.5 MIPS" },
           { "label": "Buses", "value": "UNIBUS / MASSBUS" }
         ],
-        "highlight": "Lower cost, same architecture - the department's infrastructure began to multiply."
+        "highlight": "Lower cost, same architecture"
       },
       "m68000": {
-        "intro": "Specialized Real-Time Image Processing",
-        "description": "The Motorola 68000 was a 16-bit external / 32-bit internal processor used in the Vicom DIP (Digital Image Processor) as a control processor. The Vicom's pipeline architecture enabled real-time image processing, pioneering for 1981. The 68000 coordinated the individual image processing pipeline stages and managed the 4MB pixel RAM.",
+        "label": "- as a control processor in specialized systems",
+        "intro": "The Motorola 68000 processor family contributed to the revolution in computing systems in the 1980s and 1990s.",
+        "description": "The Motorola 68000 was a 16-bit external/32-bit internal processor that was used in many systems in our collection, either as a main processor (as in the Sun-3/280) or as a control processor, as in the Convex C-120 and Vicom DIP (Digital Image Processor). The latter two had specialized processors, the C-120 for vector calculations, and the Vicom DIP for image processing. The Vicom DIP had a pipeline architecture that allowed for real-time image processing, pioneering for its time (1981). The 68000 control processor coordinated the individual image processing stages and the management of the 4MB pixel RAM.",
         "achievements": [
-          "First specialized real-time image processing in the department",
+          "The first real-time fast image processing capability",
           "Support for computer vision research",
           "Foundation of the Image Processing Laboratory (CVRL)"
         ],
@@ -619,28 +621,27 @@
           { "label": "Role", "value": "Pipeline control processor" },
           { "label": "Machine", "value": "Vicom DIP" }
         ],
-        "highlight": "The 68000 in the Vicom DIP gave the department real-time image processing capability - pioneering for 1981."
+        "highlight": "The 68000 in the Vicom DIP gave research teams in the department the ability to process large volumes and streams of images in real time - groundbreaking for its time (1981)."
       },
       "z8000": {
-        "intro": "16-bit Unix Server for 40 Concurrent Users",
-        "description": "The Zilog Z8000 was a 16-bit processor used in the Plexus P/40. Designed for multi-user Unix environments, with separate processors for computation and I/O. The P/40 with the Z8000 could serve up to 40 concurrent users - impressive for the era.",
+        "intro": "16-bit processor to support Unix operating system for concurrent interactive users",
+        "description": "The Zilog Z8000 was a 16-bit processor that appeared in the early 1980s and was used in the Plexus P/40 in our collection. It was designed for multi-user Unix environments, with separate processors for computation and input/output. The P/40 with the Z8000 could handle up to 40 simultaneous users - remarkable for the time.",
         "achievements": [
-          "Support for up to 40 concurrent interactive users",
-          "Running UNIX System III with support for FORTRAN, COBOL, Pascal",
-          "Connected to local area Ethernet network"
+          "UNIX System III support with FORTRAN, COBOL, Pascal support",
+          "Ability to connect to a local Ethernet network"
         ],
         "specs": [
           { "label": "Architecture", "value": "16-bit" },
           { "label": "Max users", "value": "40 concurrent" },
           { "label": "OS", "value": "UNIX System III" }
         ],
-        "highlight": "The Z8000 in the Plexus P/40 brought Unix to an affordable multi-user system - 40 users simultaneously!"
+        "highlight": "The Z8000 on the Plexus P/40 brought Unix to an affordable multi-user system - 40 concurrent users, significant for its time! (1980s)"
       },
       "ka86": {
-        "intro": "Quadruple Power - The Major Upgrade",
-        "description": "The VAX KA86 was the CPU of the VAX 8600 'Talos', the most powerful VAX system the department acquired. With an 80ns machine cycle (12.5 MHz) and implementation in ECL macrocell arrays, the KA86 was approximately 4 times faster than the KA780. It consisted of 4 independent logic units (E, F, I, M) for parallel execution.",
+        "intro": "Four times the power compared to the VAX-11/780",
+        "description": "The VAX KA86 was the CPU of the VAX 8600, the most powerful system in the VAX family acquired by the division, and the particular machine was named «Talos». With a machine cycle of 80ns (12.5 MHz) and implemented in ECL macrocell arrays, the KA86 was about 4 times faster than the KA780. It consisted of 4 independent logic units (E, F, I, M) for parallel execution.",
         "achievements": [
-          "4x faster than the KA780 - capability for serious research computing",
+          "4x faster than KA780 - more users, scientific tasks, and computing",
           "Optional floating-point accelerator (FPA)",
           "16KB cache for faster data access"
         ],
@@ -649,43 +650,43 @@
           { "label": "Technology", "value": "ECL Macrocell Arrays" },
           { "label": "Cache", "value": "16KB" }
         ],
-        "highlight": "At 4 MIPS the KA86 was the most powerful VAX processor in the department - capable of serious academic research."
+        "highlight": "At 4 MIPS the KA86 was the most powerful VAX processor in the department"
       },
       "ka630": {
-        "intro": "VAX for Every Laboratory - Affordable and Powerful",
-        "description": "The VAX KA630 was the CPU of the MicroVAX II 'Minos', the most affordable member of the VAX family. The KA630-AA module included the MicroVAX 78032 microprocessor and the MicroVAX 78132 floating-point coprocessor at 5 MHz. In Q22-Bus format, it allowed each department laboratory to have its own VAX infrastructure.",
+        "intro": "VAX for every lab or team - targeting the mid-range",
+        "description": "The VAX KA630 was the CPU of the MicroVAX II, the most affordable member of the VAX family, the specific model in our collection was named «Minos». The KA630-AA unit included the MicroVAX 78032 microprocessor and the MicroVAX 78132 floating-point coprocessor at 5 MHz. In Q22-Bus format, it allowed each laboratory or group in the department to have its own VAX server.",
         "achievements": [
-          "Every laboratory could have its own VAX - decentralized infrastructure",
+          "Decentralized infrastructure with multiple VAX systems",
           "Built-in FPU for scientific computing",
-          "Memory from 1MB to 16MB - great flexibility"
+          "Memory from 1MB to 16MB - flexibility and significant memory size for its time"
         ],
         "specs": [
           { "label": "Clock", "value": "5 MHz" },
           { "label": "FPU", "value": "MicroVAX 78132" },
           { "label": "Bus", "value": "Q22-Bus" }
         ],
-        "highlight": "The KA630 made VAX affordable - every laboratory could have its own processing power."
+        "highlight": "The KA630 made the VAX affordable - the server world was moving from a centralized model of a few, large, and expensive systems (mainframes) to a more decentralized model of more and cheaper mid-power systems (minicomputers)."
       },
       "m68020": {
-        "intro": "32-bit Workstation CPU for Scientific Applications",
-        "description": "The Motorola 68020 was the full 32-bit successor to the 68000 and was used in the Sun 3/280. With a 25MHz clock and Motorola 68881 floating-point coprocessor (20MHz), the Sun 3/280 offered 2.5 MIPS and was ideal for scientific applications. It supported VMEbus with 12 card slots.",
+        "intro": "32-bit Workstation CPU with support for demanding software systems, such as UNIX",
+        "description": "The Motorola 68020 was the full 32-bit successor to the original 16-bit 68000 and was used in the Sun 3/280 of our collection. With a 25MHz clock and Motorola 68881 floating-point coprocessor (20MHz), the Sun 3/280 offered 2.5 MIPS and was ideal for scientific applications. It supported VMEbus with 12 card slots.",
         "achievements": [
           "Access to full 32-bit workstation architecture",
           "High floating-point performance for scientific computing",
-          "VMEbus with 12 slots - great expandability"
+          "Significant expandability via VMEbus with 12 slots"
         ],
         "specs": [
           { "label": "Clock", "value": "25 MHz" },
           { "label": "FPU", "value": "Motorola 68881 / 20MHz" },
           { "label": "Performance", "value": "2.5 MIPS" }
         ],
-        "highlight": "The 68020 in the Sun 3/280 brought workstation-class processing power - ideal for research applications."
+        "highlight": "The 68020 in the Sun 3/280 brought workstation-class processing power - ideal for demanding software systems, such as UNIX."
       },
       "convex": {
-        "intro": "Vector Processor - The Era of High-Performance Computing",
-        "description": "The Convex CMOS VLSI processor of the C-120 was the most advanced CPU the department ever acquired. It consisted of two units: a scalar processor for general use and a vector processor with 8 registers × 128 elements of 64-bit. The two units operated simultaneously, utilizing CMOS VLSI technology at 20K gates/chip.",
+        "intro": "Vector Processor - High-Performance Scientific Computing",
+        "description": "The C-120's Convex CMOS VLSI processor was specialized to support scientific applications requiring high performance. It consisted of two units: a scalar processor for general use and a vector processor with 8 registers × 128 elements of 64-bit. The two units operated simultaneously, utilizing CMOS VLSI technology at 20K gates/chip.",
         "achievements": [
-          "First vector processor in the department - a new era of computational power",
+          "First vector processor in the department - support for scientific applications",
           "40 Mflops for scientific computing in single precision",
           "Simultaneous scalar and vector processing"
         ],
@@ -694,7 +695,7 @@
           { "label": "Performance", "value": "20-40 Mflops" },
           { "label": "Vector regs", "value": "8 × 128 × 64-bit" }
         ],
-        "highlight": "At 40 Mflops the Convex CMOS VLSI was minisupercomputer class - dozens of times more powerful than any VAX processor."
+        "highlight": "At 40 Mflops the Convex CMOS VLSI was minisupercomputer class - dozens of times more powerful than VAX processors in scientific calculations."
       }
     }
   },
@@ -703,13 +704,13 @@
     "introText": "From the department's earliest years, UNIX was the common thread linking successive generations of computing systems. Each new machine brought with it a new flavor of UNIX - from Berkeley's early BSD releases and AT&T's commercial System III, to specialized versions for workstations and supercomputers. Together they trace an unbroken evolutionary line that mirrors the growth of computing in the department and in Greece.",
     "achievementsTitle": "Key features",
     "conclusionTitle": "A Decade of UNIX",
-    "conclusionText": "From BSD 4.1 in 1980 to Convex UNIX 6.2 in the early 1990s, the department traced a complete evolutionary arc of UNIX - following, and sometimes pioneering, global developments. Ariadne running BSD 4.2 brought Greece's first email to the world, while the Convex C-120 with ConvexOS completed the picture of a department that put UNIX to work across its full range - from education to cutting-edge scientific computing.",
+    "conclusionText": "From BSD 4.1 in 1980 to Convex UNIX 6.2 in the early 1990s, the department closely followed (often pioneering) the evolution of UNIX. Ariadne with BSD 4.2 brought the first email to Greece, while Convex C-120 with ConvexOS demonstrated the scope of the UNIX operating system - from education to cutting-edge scientific computing.",
     "oss": {
       "bsd41": {
-        "intro": "The department's first taste of BSD UNIX",
+        "intro": "The department's first version of BSD UNIX",
         "description": "BSD 4.1 was developed at the University of California, Berkeley, as a significant improvement over Bell Labs' original UNIX. It introduced better job control, an improved file system, and more reliable multi-user operation. At the department it ran on the VAX 11/750 - a more affordable successor to the 11/780 - and was used for the first research and educational work in a UNIX environment.",
         "achievements": [
-          "First BSD UNIX installation on the department's VAX 11/750",
+          "Installation possible on VAX 11/750",
           "Improved job control compared to AT&T UNIX V7",
           "Multi-user support for concurrent research on a 32-bit architecture"
         ],
@@ -719,11 +720,11 @@
           { "label": "Base", "value": "UNIX Version 7" },
           { "label": "Architecture", "value": "VAX 32-bit" }
         ],
-        "highlight": "BSD 4.1 marked the department's first contact with the UNIX ecosystem - a step that opened the door to decades of research computing."
+        "highlight": "BSD 4.1 was one of the first versions of UNIX used in CSD."
       },
       "unixiii": {
         "intro": "The commercial face of AT&T UNIX",
-        "description": "UNIX System III was the first commercial UNIX release offered by AT&T Bell Laboratories in 1982. Unlike BSD versions developed in universities, System III was a clean commercial product, written in C. At the department it ran on the Plexus P/40, a 16-bit computer based on the Zilog Z8000 that could serve up to 40 simultaneous users and supported BASIC, COBOL, FORTRAN, and Pascal.",
+        "description": "UNIX System III was the first commercial UNIX release offered by AT&T Bell Laboratories in 1982. Unlike BSD versions developed in universities, System III was a clean commercial product, written in C. It ran on our collection's Plexus P/40, a 16-bit computer based on the Zilog Z8000, which could handle up to 40 simultaneous users and supported BASIC, COBOL, FORTRAN, and Pascal.",
         "achievements": [
           "First commercial (AT&T) UNIX at the department",
           "Support for up to 40 simultaneous users on the Plexus P/40",
@@ -735,11 +736,11 @@
           { "label": "Base", "value": "UNIX V7" },
           { "label": "Architecture", "value": "Zilog Z8000 16-bit" }
         ],
-        "highlight": "A rare example of the commercial AT&T UNIX line alongside BSD versions - two parallel evolutionary paths of UNIX coexisted at the department."
+        "highlight": "A rare example of the commercial AT&T UNIX line alongside BSD versions - two parallel evolutionary paths of UNIX."
       },
       "bsd42": {
         "intro": "The UNIX that brought Greece to the Internet",
-        "description": "BSD 4.2, released in 1983, was a landmark in operating system history: the first UNIX to incorporate a full TCP/IP networking stack, making it ideal for connecting to the early Internet. At the department it ran on the VAX 11/780 (Ariadne) - and through it, the first email between Greece and the outside world was sent on March 29, 1984, marking a historic moment for the country.",
+        "description": "BSD 4.2, released in 1983, was a landmark in operating system history: the first UNIX to incorporate a full TCP/IP networking stack, making it ideal for connecting to the early Internet. At the department it could run on the VAX 11/780 (Ariadne) - and through it, the first email between Greece and the outside world was sent on March 29, 1984, marking a historic moment for the country.",
         "achievements": [
           "First fully integrated TCP/IP stack in a UNIX operating system",
           "New Fast File System (FFS) for faster data access",
@@ -767,10 +768,10 @@
           { "label": "Base", "value": "BSD 4.2" },
           { "label": "Architecture", "value": "VAX 32-bit" }
         ],
-        "highlight": "Ultrix allowed the department's VAX systems to share the same UNIX environment, making collaboration between research groups easier."
+        "highlight": "Ultrix allowed the department's VAX systems to support a UNIX environment, an important feature for a computer science department in which students are trained in understanding and using this operating system."
       },
       "sunos": {
-        "intro": "UNIX comes to the workstation",
+        "intro": "UNIX evolves and is supported on workstations",
         "description": "SunOS was the BSD-based UNIX that Sun Microsystems developed for its workstations. Sun systems brought UNIX to a new audience: no longer exclusively large central machines, but personal workstations for each individual researcher. One of its most significant features was the Network File System (NFS), which enabled shared file access over a network. At the department, the Sun 3/280 with SunOS served as a research workstation.",
         "achievements": [
           "Brought UNIX from mainframes to personal workstations",
@@ -783,11 +784,11 @@
           { "label": "Base", "value": "BSD 4.2" },
           { "label": "Architecture", "value": "Motorola 68020" }
         ],
-        "highlight": "With SunOS, UNIX stopped being exclusively a 'central system for many users' and became a tool for every individual researcher."
+        "highlight": "With SunOS, UNIX ceased to be exclusively a central system for many users and was also supported on smaller systems for use by small groups or individual users."
       },
       "convexunix": {
-        "intro": "UNIX for a supercomputer - the final milestone",
-        "description": "Convex UNIX 6.2 (or ConvexOS) was an advanced BSD 4.3 variant developed by Convex Computer Corporation for its minisupercomputers. Its defining feature was vectorizing compilers that automatically converted ordinary FORTRAN/C code into vector instructions, fully exploiting the C-120's vector processor. A separate Service Processing Unit (SPU) running a lightweight UNIX on a Motorola 68020 handled system management, leaving the main processor free for scientific computation.",
+        "intro": "Specialized UNIX version for a supercomputer",
+        "description": "Convex UNIX 6.2 (or ConvexOS) was an advanced BSD 4.3 variant developed by Convex Computer Corporation for its minisupercomputers. Its defining feature was vectorizing compilers that automatically converted ordinary FORTRAN/C code into vector instructions, fully exploiting the C-120's vector processor. A separate Service Processing Unit (SPU) was running this lightweight UNIX on a Motorola 68020 handled system management, leaving the main processor free for scientific computation.",
         "achievements": [
           "Vectorizing compilers that automatically exploited the vector processor",
           "Separation of user computation from system management via the SPU",

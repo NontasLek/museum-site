@@ -29,7 +29,6 @@ type PersonData = {
   name: string
   role: string
   contributions: string[]
-  highlight: string
 }
 
 // Reusable card component for both professors and infrastructure staff
@@ -47,9 +46,6 @@ function PersonCard({ person }: { person: PersonData }) {
           <p key={i} className="people-contribution">- {c}</p>
         ))}
       </div>
-      <div className="people-highlight">
-        <p>{person.highlight}</p>
-      </div>
     </div>
   )
 }
@@ -63,7 +59,7 @@ type TimelineImage = {
 // Empty-year entries ("") are visual spacers in the timeline layout.
 // Image IDs are referenced by CSS for per-image size overrides (#image-1989, #image-1991).
 const baseTimeline = [
-  { year: "1984",      images: [] },
+  { year: "1984",      images: [{ src: import.meta.env.BASE_URL + 'images/internet/1984_email EKEK.jpg',        id: "image-1984" }] },
   { year: "1985",      images: [] },
   { year: "1989",      images: [] },
   { year: "",      images: [{ src: import.meta.env.BASE_URL + 'images/internet/1989.png',        id: "image-1989" }] },
@@ -97,15 +93,13 @@ function InternetPage() {
   const professors = professorIds.map((id) => ({
     name:          t(`peoplePage.professors.${id}.name`),
     role:          t(`peoplePage.professors.${id}.role`),
-    contributions: t(`peoplePage.professors.${id}.contributions`, { returnObjects: true }) as string[],
-    highlight:     t(`peoplePage.professors.${id}.highlight`),
+    contributions: t(`peoplePage.professors.${id}.contributions`, { returnObjects: true }) as string[]
   }))
 
   const infrastructure = infrastructureIds.map((id) => ({
     name:          t(`peoplePage.infrastructure.${id}.name`),
     role:          t(`peoplePage.infrastructure.${id}.role`),
-    contributions: t(`peoplePage.infrastructure.${id}.contributions`, { returnObjects: true }) as string[],
-    highlight:     t(`peoplePage.infrastructure.${id}.highlight`),
+    contributions: t(`peoplePage.infrastructure.${id}.contributions`, { returnObjects: true }) as string[]
   }))
 
   // Students is a plain string array in the translation file
@@ -130,33 +124,6 @@ function InternetPage() {
                 {entry.events.map((event, i) => (
                   <p key={i} className="internet-event">- {event}</p>
                 ))}
-                 {entry.year === "1984" && (
-                <div className="year-1984-events">
-                  {<p>
-                    Dear Friends and Colleagues,
-                     <br></br>Ariadne, the VAX-11/780 at the Computer Science 
-                     <br></br>Institute of the Cretan Research Center ,
-                     <br></br>Iraklio, Kriti, is now on the UUCP 
-                     <br></br>network, exchanging 
-                     <br></br>mail and news. The proceeding message 
-                     <br></br>is the reply that I received to a message that 
-                     <br></br>I had sent to "postmaster" there.
-                     <br></br>Communication is via "ncvax", a machine in the
-                     <br></br>Netherlands which connects to 
-                     <br></br>(at least) "decvax" on the East Coast of USA. 
-                     <br></br>Thus, you can send mail to Kriti using 
-                     <br></br>an address of the type:  
-                     <br></br>decvax!mcvax!ariadne!LOGIN-NAME
-                     <br></br>or mcvax!ariadne!LOGIN-NAME@decvax
-                     <br></br>or berkeley!decvax!mcvax!ariadne!LOGIN-NAME
-                     <br></br>or ucbvax!decvax!mcvax!ariadne!LOGIN-NAME
-                     <br></br>or decvax!mcvax!ariadne!LOGIN-NAME@berkeley
-                     <br></br>or variations thereof.
-                     <br></br>Manolis Katevenis
-                     <br></br>ucbvax!kateveni 
-                     </p>}
-                </div>
-                )}
                 {entry.images.map((img, i) => (
                   <div key={i} className="internet-image-container" >
                     <div className="image-hover-container">

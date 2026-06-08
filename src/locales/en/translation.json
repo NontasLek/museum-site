@@ -116,9 +116,9 @@
     "timeline": [
       {
         "events": [
-          "First email between the Institute of Computer Science (ICS) of the Research Center of Crete and America via UUCP."
+          "First email between the Research Center of Crete (RCC) and America via UUCP"
         ],
-        "images": []
+        "images": [{ "caption": "The first email" }]
       },
       {
         "events": [
@@ -169,7 +169,7 @@
       },
       {
         "events": [
-          "The first experimental web page in Greece belongs to ICS-FORTH, at the address www.csi.forth.gr with information about the Institute (pilot web server/httpd on a SUN2 workstation at Daidalou 22).",
+          "The first experimental web page in Greece belongs to ICS-FORTH, at the address www.ics.forth.gr with information about the Institute (pilot web server/httpd on a SUN2 workstation at Daidalou 22).",
           "The first Network Operation Center (NOC) is created in Heraklion based at ICS-FORTH facilities at Daidalou 36.",
           "UoC at Knossos is interconnected with the Institute of Electronic Structure and Laser of ITE and the schools in Rethymno via DECnet by the IT team of Yannis Fragkiadakis."
         ],
@@ -452,72 +452,65 @@
     "professors": {
       "orfanoudakis": {
         "name": "Stelios Orphanoudakis",
-        "role": "Professor & f. Director of ICS-FORTH",
+        "role": "Professor CSD (1984 – 2005†) & former Director of the Institute of Technology-FORTH (1994 – 2005†)",
         "contributions": [
-          "Founded the Image Processing and Analysis Laboratory (VICOM)",
+          "Founded the Image Processing and Analysis Laboratory",
           "Member of the EARN board for Greece (1985)",
           "Member of the EARN Executive Committee (1989)",
           "UoC hosted the 3rd International EARN Conference under his leadership",
           "As Director of ICS-FORTH, made the decision for commercial exploitation of FORTHnet",
-          "The university's amphitheater bears his name"
-        ],
-        "highlight": "The central pillar of the Internet's entry into Greece and the development of CSD."
+          "CSD's Amphitheater B bears his name."
+        ]
       },
       "katevenis": {
         "name": "Manolis Katevenis",
-        "role": "Emeritus Professor & f. Director of ICS-FORTH",
+        "role": "Emeritus Professor CSD & Head of CARV Laboratory (1984 -)",
         "contributions": [
           "Sent the first email from Greece to America on March 29, 1984",
           "Signed as ucbvax!kateveni the historic message that arrived in America on March 31",
           "Made a decisive contribution to the introduction of the Internet to Greece"
-        ],
-        "highlight": "The person who sent the first Greek email - a historic event for the entire country."
+        ]
       },
       "kourkoumpetis": {
         "name": "Konstantinos Kourkoumpetis",
-        "role": "Professor",
+        "role": "Professor CSD (1989 – 1999) & Head of TNL (Formal Methods) IA-FORTH (1989 – 1999)",
         "contributions": [
           "His graduate students contributed to the expansion of the ICS-FORTH network team (1991)",
           "Contributed to the development of the department's network infrastructure"
-        ],
-        "highlight": "His academic work supplied the network team with human resources."
+        ]
       },
       "sartzekakis": {
         "name": "Stelios Sartzekakis",
-        "role": "Professor & Network Coordinator",
+        "role": "Computer Engineer, Head of TNL (Broadband Networks) IP-FORTH (- 2002)",
         "contributions": [
           "Coordinated the expansion of the ICS-FORTH network team (1991)",
           "Funding from European research projects under his guidance",
           "Contributed to the creation of the country's network infrastructure"
-        ],
-        "highlight": "The coordinator who organized and expanded the network team during a critical period."
+        ]
       },
       "stamoulis": {
         "name": "Georgios Stamoulis",
-        "role": "Assistant Professor",
+        "role": "Assistant Professor CSD & Head of TNL (Advanced Network Services) IP-FORTH (1995 – 2000)",
         "contributions": [
           "Contributed to the introduction of the Internet to Greece",
           "Member of the academic team that developed the network infrastructure"
-        ],
-        "highlight": "Part of the academic team that laid the foundations of the Greek Internet."
+        ]
       },
       "syris": {
         "name": "Vasileios Syris",
-        "role": "Assistant Professor",
+        "role": "Assistant Professor CSD & Member TNL IP-FORTH (2002 - 2009)",
         "contributions": [
           "Contributed to the introduction of the Internet to Greece",
           "Member of the academic networking team"
-        ],
-        "highlight": "Part of the academic team that laid the foundations of the Greek Internet."
+        ]
       },
       "traganitis": {
         "name": "Apostolos Traganitis",
-        "role": "Emeritus Professor & f. Director of ICS",
+        "role": "Professor Emeritus CSD (1987-) & Head of TNL Laboratory, IA-FORTH (2002 -)",
         "contributions": [
           "Contributed to the introduction of the Internet to Greece",
           "Member of the academic networking team"
-        ],
-        "highlight": "Part of the academic team that laid the foundations of the Greek Internet."
+        ]
       }
     },
     "infrastructure": {
@@ -529,8 +522,7 @@
           "Undertook the search for investors for the transition to commercial activity",
           "Key architect of the creation of FORTHnet S.A.",
           "Negotiated with OTE, Piraeus Bank, and ELEFTHEROTYPIA"
-        ],
-        "highlight": "The person who transformed the academic network into a commercial company - FORTHnet."
+        ]
       },
       "fragkiadakis": {
         "name": "Giannis Fragkiadakis",
@@ -539,8 +531,7 @@
           "Led the IT team that interconnected UoC Knossos with ITE and Rethymno (1991)",
           "Used DECnet for the network expansion",
           "Contributed to the creation of Crete's network infrastructure"
-        ],
-        "highlight": "The technical mastermind who connected Crete's academic institutions."
+        ]
       },
       "vitsakis": {
         "name": "Giorgos Vitsakis",
@@ -548,17 +539,15 @@
         "contributions": [
           "Member of the infrastructure and technical support team",
           "Continuously contributed to the development of the network infrastructure"
-        ],
-        "highlight": "Continuous technical support of the infrastructure that brought the Internet to Greece."
+        ]
       },
       "vassiliou": {
         "name": "Giannis Vassiliou",
-        "role": "Professor",
+        "role": "Professor CSD & former Director of the Institute of Computer Science and Engineering (1987 - 1993)",
         "contributions": [
           "Made the decision to connect to EUnet via a 19200 bps leased line (1990)",
           "His decision opened the way for Greece's full connection to the Internet"
-        ],
-        "highlight": "A decision that changed history - the connection to EUnet in 1990."
+        ]
       }
     }
   },

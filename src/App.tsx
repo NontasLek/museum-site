@@ -164,7 +164,7 @@ function HomePage() {
                 {entry.machines.map((machine) => (
                   <div
                     key={machine.id}
-                    className="machine-card"
+                    className={`machine-card${machine.type !== 'computer' ? ' machine-card-sub' : ''}`}
                     onClick={() => navigate(`/machine/${machine.id}`)}
                   >
                     {machine.name}

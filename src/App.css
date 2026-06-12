@@ -103,6 +103,13 @@ body {
   transform: scale(1.05);
 }
 
+/* CPU and OS cards are shown lighter/less bold so they read as
+   attributes of the computer card above them, not as their own entries */
+.machine-card-sub {
+  font-weight: normal;
+  opacity: 0.6;
+}
+
 /* Green year labels below the timeline line */
 .year-label {
   color: #00ff00;
